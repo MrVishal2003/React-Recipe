@@ -12,7 +12,6 @@ const Header = () => {
                     <GiSpoon />
                 </h1>
             </Link>
-            <BiSolidUserCircle className='user-img' />
         </div>
     )
 }

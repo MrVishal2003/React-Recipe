@@ -39,14 +39,9 @@ To run this project locally, you'll need Node.js and npm (or yarn) installed on 
    ```bash
    git clone https://github.com/itisameerkhan/react-full-recipe-app.git
 
-   ```
-
 2. Navigate to the project directory:
-
    ```
    cd react-full-recipe-app
-
-   ```
 
 3. Install dependencies:
 
@@ -55,15 +50,12 @@ To run this project locally, you'll need Node.js and npm (or yarn) installed on 
    # or
    yarn install
 
-   ```
-
 4. Start the development server:
 
    ```
    npm run dev
    # or
    yarn dev
-   ```
 
 # Usage
 

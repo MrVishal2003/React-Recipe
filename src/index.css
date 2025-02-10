@@ -1,11 +1,31 @@
-* 
-{
+* {
     box-sizing: border-box;
     margin: 0;
-    padding:0;
-    font-family: 'Poppins';
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
-.app-container 
-{
-    padding: 50px 100px;
+
+.app-container {
+    padding: 50px 100px; /* Default for larger screens */
+}
+
+/* Adjust padding for tablets */
+@media (max-width: 1024px) {
+    .app-container {
+        padding: 40px 50px;
+    }
+}
+
+/* Reduce padding for smaller screens */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 30px 30px;
+    }
+}
+
+/* Minimal padding for mobile screens */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 20px 15px;
+    }
 }

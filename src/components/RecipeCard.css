@@ -1,26 +1,55 @@
-.recipe-img 
-{
+.recipe-img {
     object-fit: cover;
     height: 200px;
     width: 300px;
     border-radius: 10px;
 }
-.recipe-p 
-{
-    padding:0px 15px;
+
+/* Adjust image size for smaller screens */
+@media (max-width: 768px) {
+    .recipe-img {
+        height: 180px;
+        width: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-img {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+.recipe-p {
+    padding: 0px 15px;
     position: absolute;
     bottom: 0px;
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: no-wrap;
+    white-space: nowrap; /* Fixed "no-wrap" to "nowrap" */
     height: 80px;
     z-index: 3;
     border-radius: 10px;
     width: 300px;
     letter-spacing: 1px;
 }
-.recipe-card-container 
-{
+
+/* Adjust text width for smaller screens */
+@media (max-width: 768px) {
+    .recipe-p {
+        width: 260px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-p {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+.recipe-card-container {
     display: flex;
     flex-direction: column;
     object-fit: cover;
@@ -30,38 +59,76 @@
     transition: all 100ms ease-in-out;
     cursor: pointer;
     margin: 20px 0;
-    color:white;
+    color: white;
     animation: fade-in 300ms linear;
 }
+
 @keyframes fade-in {
     0% {
         top: 40px;
         opacity: 0;
     }
     100% {
-        top:0;
+        top: 0;
         opacity: 1;
     }
 }
-.recipe-card-container:hover 
-{
+
+.recipe-card-container:hover {
     transform: scale(0.97);
 }
-.recipe-gradient
-{
+
+.recipe-gradient {
     height: 200px;
     width: 300px;
     position: absolute;
     border-radius: 10px;
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
 }
 
+/* Adjust gradient for smaller screens */
+@media (max-width: 768px) {
+    .recipe-gradient {
+        height: 180px;
+        width: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recipe-gradient {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+/* Fix navigation arrows for carousel */
 .splide__arrow.splide__arrow--prev {
-    left: 1230px;
-    top:-25px
+    left: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .splide__arrow.splide__arrow--next {
-    right: 10px; 
-    top:-25px
+    right: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Adjust arrow positions for smaller screens */
+@media (max-width: 768px) {
+    .splide__arrow.splide__arrow--prev {
+        left: 10px;
+    }
+
+    .splide__arrow.splide__arrow--next {
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .splide__arrow.splide__arrow--prev,
+    .splide__arrow.splide__arrow--next {
+        width: 30px;
+        height: 30px;
+    }
 }

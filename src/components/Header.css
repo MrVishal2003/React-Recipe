@@ -1,27 +1,47 @@
-.header-container 
-{
-    margin: -50px -100px 30px;
-    padding:10px 20px;
+.header-container {
+    padding: 10px 20px;
     background-color: #202020;
-    color:white;
+    color: white;
     position: sticky;
-    top:0;
+    top: 0;
     z-index: 999;
     box-shadow: 0px 0px 3px 1px black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
-.header-container h1 
-{
-    font-family: 'Satisfy';
+
+/* Remove negative margins to avoid overflow */
+@media (max-width: 1024px) {
+    .header-container {
+        margin: 0;
+    }
+}
+
+.header-container h1 {
+    font-family: 'Satisfy', cursive;
     display: flex;
     align-items: center;
     gap: 5px;
-    color:white;
-}
-.header-container a 
-{
-    text-decoration: none;
+    color: white;
+    font-size: 24px; /* Default size */
 }
 
+/* Reduce font size on smaller screens */
+@media (max-width: 768px) {
+    .header-container h1 {
+        font-size: 20px;
+    }
+}
+
+/* Even smaller font size for mobile screens */
+@media (max-width: 480px) {
+    .header-container h1 {
+        font-size: 18px;
+    }
+}
+
+.header-container a {
+    text-decoration: none;
+}

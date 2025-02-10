@@ -1,6 +1,21 @@
-.home-container 
-{
+.home-container {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 30px; /* Default spacing */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* Adjust spacing on smaller screens */
+@media (max-width: 768px) {
+    .home-container {
+        gap: 20px; /* Reduce gap for better fit on tablets */
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        gap: 15px; /* Further reduce gap for small screens */
+        padding: 10px;
+    }
 }

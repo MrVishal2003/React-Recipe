@@ -1,8 +1,25 @@
-.searched-container 
-{
+.searched-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 40px;
+    padding: 0 20px; /* Add padding to prevent items from touching screen edges */
+}
+
+/* Adjust gap and spacing on smaller screens */
+@media (max-width: 768px) {
+    .searched-container {
+        gap: 15px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .searched-container {
+        flex-direction: column;
+        align-items: center; /* Center items for a cleaner look */
+        gap: 10px;
+        margin-top: 20px;
+    }
 }

@@ -1,5 +1,7 @@
 # React Full Recipe App
 
+[![Deploy on Vercel](https://img.shields.io/badge/Live%20Demo-Vercel-blue)](https://react-recipe-vert.vercel.app/)
+
 Welcome to the React Full Recipe App! This app allows you to discover a wide range of delicious recipes, including popular items, veggie picks, and various cuisine categories such as Italian, Chinese, Thai, and American. You can also use the search feature to find your favorite recipes quickly.
 
 ## Table of Contents
